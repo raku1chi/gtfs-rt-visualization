@@ -1,5 +1,4 @@
 from datetime import date
-from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -9,59 +8,59 @@ class Agency(BaseModel):
     agency_name: str
     agency_url: str
     agency_timezone: str
-    agency_lang: Optional[str] = None
-    agency_phone: Optional[str] = None
-    agency_fare_url: Optional[str] = None
+    agency_lang: str | None = None
+    agency_phone: str | None = None
+    agency_fare_url: str | None = None
 
 
 class AgencyJP(BaseModel):
     agency_id: str
-    agency_official_name: Optional[str] = None
-    agency_zip_number: Optional[str] = None
-    agency_address: Optional[str] = None
-    agency_president_pos: Optional[str] = None
-    agency_president_name: Optional[str] = None
+    agency_official_name: str | None = None
+    agency_zip_number: str | None = None
+    agency_address: str | None = None
+    agency_president_pos: str | None = None
+    agency_president_name: str | None = None
 
 
 class Route(BaseModel):
     route_id: str
-    agency_id: Optional[str] = None
+    agency_id: str | None = None
     route_short_name: str
     route_long_name: str
-    route_desc: Optional[str] = None
+    route_desc: str | None = None
     route_type: int
-    route_url: Optional[str] = None
-    route_color: Optional[str] = None
-    route_text_color: Optional[str] = None
-    route_sort_order: Optional[int] = None
+    route_url: str | None = None
+    route_color: str | None = None
+    route_text_color: str | None = None
+    route_sort_order: int | None = None
 
 
 class Stop(BaseModel):
     stop_id: str
-    stop_code: Optional[str] = None
+    stop_code: str | None = None
     stop_name: str
-    stop_desc: Optional[str] = None
+    stop_desc: str | None = None
     stop_lat: float
     stop_lon: float
-    zone_id: Optional[str] = None
-    stop_url: Optional[str] = None
-    location_type: Optional[int] = None
-    parent_station: Optional[str] = None
-    stop_timezone: Optional[str] = None
-    wheelchair_boarding: Optional[int] = None
+    zone_id: str | None = None
+    stop_url: str | None = None
+    location_type: int | None = None
+    parent_station: str | None = None
+    stop_timezone: str | None = None
+    wheelchair_boarding: int | None = None
 
 
 class Trip(BaseModel):
     route_id: str
     service_id: str
     trip_id: str
-    trip_headsign: Optional[str] = None
-    trip_short_name: Optional[str] = None
-    direction_id: Optional[int] = None
-    block_id: Optional[str] = None
-    shape_id: Optional[str] = None
-    wheelchair_accessible: Optional[int] = None
-    bikes_allowed: Optional[int] = None
+    trip_headsign: str | None = None
+    trip_short_name: str | None = None
+    direction_id: int | None = None
+    block_id: str | None = None
+    shape_id: str | None = None
+    wheelchair_accessible: int | None = None
+    bikes_allowed: int | None = None
 
 
 class StopTime(BaseModel):
@@ -70,11 +69,11 @@ class StopTime(BaseModel):
     departure_time: str
     stop_id: str
     stop_sequence: int
-    stop_headsign: Optional[str] = None
-    pickup_type: Optional[int] = None
-    drop_off_type: Optional[int] = None
-    shape_dist_traveled: Optional[float] = None
-    timepoint: Optional[int] = None
+    stop_headsign: str | None = None
+    pickup_type: int | None = None
+    drop_off_type: int | None = None
+    shape_dist_traveled: float | None = None
+    timepoint: int | None = None
 
 
 class Calendar(BaseModel):
@@ -101,24 +100,24 @@ class Shape(BaseModel):
     shape_pt_lat: float
     shape_pt_lon: float
     shape_pt_sequence: int
-    shape_dist_traveled: Optional[float] = None
+    shape_dist_traveled: float | None = None
 
 
 class FeedInfo(BaseModel):
     feed_publisher_name: str
     feed_publisher_url: str
     feed_lang: str
-    feed_start_date: Optional[date] = None
-    feed_end_date: Optional[date] = None
-    feed_version: Optional[str] = None
+    feed_start_date: date | None = None
+    feed_end_date: date | None = None
+    feed_version: str | None = None
 
 
 # GTFS-Flex Models
 class FlexStopTime(StopTime):
     """GTFS-Flex用の拡張StopTime"""
 
-    start_pickup_drop_off_window: Optional[str] = None
-    end_pickup_drop_off_window: Optional[str] = None
+    start_pickup_drop_off_window: str | None = None
+    end_pickup_drop_off_window: str | None = None
 
 
 class FlexLocation(BaseModel):
@@ -132,77 +131,77 @@ class FlexLocation(BaseModel):
 # GTFS-Realtime Models
 class VehiclePosition(BaseModel):
     vehicle_id: str
-    trip_id: Optional[str] = None
-    route_id: Optional[str] = None
+    trip_id: str | None = None
+    route_id: str | None = None
     latitude: float
     longitude: float
-    bearing: Optional[float] = None
-    speed: Optional[float] = None
+    bearing: float | None = None
+    speed: float | None = None
     timestamp: int
-    current_stop_sequence: Optional[int] = None
-    current_status: Optional[str] = None
-    congestion_level: Optional[str] = None
-    occupancy_status: Optional[str] = None
+    current_stop_sequence: int | None = None
+    current_status: str | None = None
+    congestion_level: str | None = None
+    occupancy_status: str | None = None
 
 
 class TripUpdate(BaseModel):
     trip_id: str
-    route_id: Optional[str] = None
-    start_time: Optional[str] = None
-    start_date: Optional[str] = None
-    schedule_relationship: Optional[str] = None
-    vehicle_id: Optional[str] = None
+    route_id: str | None = None
+    start_time: str | None = None
+    start_date: str | None = None
+    schedule_relationship: str | None = None
+    vehicle_id: str | None = None
     timestamp: int
-    delay: Optional[int] = None
+    delay: int | None = None
 
 
 class StopTimeUpdate(BaseModel):
-    stop_sequence: Optional[int] = None
-    stop_id: Optional[str] = None
-    arrival_delay: Optional[int] = None
-    arrival_time: Optional[int] = None
-    departure_delay: Optional[int] = None
-    departure_time: Optional[int] = None
-    schedule_relationship: Optional[str] = None
+    stop_sequence: int | None = None
+    stop_id: str | None = None
+    arrival_delay: int | None = None
+    arrival_time: int | None = None
+    departure_delay: int | None = None
+    departure_time: int | None = None
+    schedule_relationship: str | None = None
 
 
 class Alert(BaseModel):
     alert_id: str
-    cause: Optional[str] = None
-    effect: Optional[str] = None
+    cause: str | None = None
+    effect: str | None = None
     header_text: str
-    description_text: Optional[str] = None
-    url: Optional[str] = None
-    active_period_start: Optional[int] = None
-    active_period_end: Optional[int] = None
-    informed_entities: List[str] = []
+    description_text: str | None = None
+    url: str | None = None
+    active_period_start: int | None = None
+    active_period_end: int | None = None
+    informed_entities: list[str] = []
 
 
 # Response Models
 class GTFSDataset(BaseModel):
     """完全なGTFSデータセット"""
 
-    agencies: List[Agency]
-    routes: List[Route]
-    stops: List[Stop]
-    trips: List[Trip]
-    stop_times: List[StopTime]
-    calendar: List[Calendar]
-    calendar_dates: List[CalendarDate]
-    shapes: List[Shape]
-    feed_info: Optional[FeedInfo] = None
+    agencies: list[Agency]
+    routes: list[Route]
+    stops: list[Stop]
+    trips: list[Trip]
+    stop_times: list[StopTime]
+    calendar: list[Calendar]
+    calendar_dates: list[CalendarDate]
+    shapes: list[Shape]
+    feed_info: FeedInfo | None = None
 
 
 class GTFSFlexDataset(GTFSDataset):
     """GTFS-Flexデータセット"""
 
-    flex_locations: List[FlexLocation]
-    flex_stop_times: List[FlexStopTime]
+    flex_locations: list[FlexLocation]
+    flex_stop_times: list[FlexStopTime]
 
 
 class GTFSRealtimeDataset(BaseModel):
     """GTFS-Realtimeデータセット"""
 
-    vehicle_positions: List[VehiclePosition]
-    trip_updates: List[TripUpdate]
-    alerts: List[Alert]
+    vehicle_positions: list[VehiclePosition]
+    trip_updates: list[TripUpdate]
+    alerts: list[Alert]
