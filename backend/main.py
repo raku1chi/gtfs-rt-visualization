@@ -1,9 +1,8 @@
-import time
 from datetime import date
+import time
 
 from fastapi import FastAPI
 
-# from gtfs_loader import GTFSDataLoader  # 一時的にコメントアウト
 from models import (
     Agency,
     Alert,
@@ -33,7 +32,7 @@ async def health_check():
 
 
 # サンプルデータAPIエンドポイント
-@app.get("/samples/basic-gtfs", response_model=GTFSDataset)
+@app.get("/samples/basic-gtfs", response_model=GTFSDataset, tags=["samples"])
 async def get_basic_gtfs_sample():
     """BasicGTFSサンプルデータを返す"""
     return GTFSDataset(
@@ -226,7 +225,7 @@ async def get_basic_gtfs_sample():
     )
 
 
-@app.get("/samples/gtfs-flex", response_model=GTFSFlexDataset)
+@app.get("/samples/gtfs-flex", response_model=GTFSFlexDataset, tags=["samples"])
 async def get_gtfs_flex_sample():
     """GTFS-Flexサンプルデータを返す"""
     # 基本GTFSデータ
@@ -340,7 +339,7 @@ async def get_gtfs_flex_sample():
     )
 
 
-@app.get("/samples/gtfs-realtime", response_model=GTFSRealtimeDataset)
+@app.get("/samples/gtfs-realtime", response_model=GTFSRealtimeDataset, tags=["samples"])
 async def get_gtfs_realtime_sample():
     """GTFS-Realtimeサンプルデータを返す"""
     current_time = int(time.time())
