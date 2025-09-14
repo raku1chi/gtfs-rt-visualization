@@ -25,10 +25,10 @@ from models import (
 app = FastAPI(title="GTFS API Service", version="0.0.1")
 
 
-@app.get("/health")
+@app.get("/healthz", include_in_schema=False)
 async def health_check():
     """ヘルスチェックエンドポイント"""
-    return {"status": "healthy", "timestamp": int(time.time())}
+    return {"status": "healthy"}
 
 
 # サンプルデータAPIエンドポイント
