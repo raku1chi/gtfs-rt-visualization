@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+ROUTE_001,DEMO,1,東京駅 - 渋谷駅線,東京駅から渋谷駅を結ぶ主要路線,3,,FF0000,FFFFFF
+ROUTE_002,DEMO,2,新宿 - 渋谷循環線,新宿と渋谷を循環する路線,3,,0000FF,FFFFFF

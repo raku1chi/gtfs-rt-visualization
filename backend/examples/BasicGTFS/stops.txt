@@ -1,0 +1,7 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+STATION_A,A001,東京駅,東京駅メインエントランス,35.681236,139.767125,1,,0,,Asia/Tokyo,1
+STATION_B,B001,新宿駅,新宿駅東口,35.690921,139.700258,1,,0,,Asia/Tokyo,1
+STATION_C,C001,渋谷駅,渋谷駅ハチ公口,35.658034,139.701636,1,,0,,Asia/Tokyo,1
+STOP_001,001,東京駅前バス停,東京駅前の主要バス停,35.681000,139.767000,1,,0,,Asia/Tokyo,2
+STOP_002,002,新宿駅前バス停,新宿駅前の主要バス停,35.690800,139.700100,1,,0,,Asia/Tokyo,2
+STOP_003,003,渋谷駅前バス停,渋谷駅前の主要バス停,35.657900,139.701500,1,,0,,Asia/Tokyo,2

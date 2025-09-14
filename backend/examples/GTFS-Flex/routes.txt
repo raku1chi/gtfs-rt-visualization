@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color,continuous_pickup,continuous_drop_off
+FLEX_ROUTE_001,FLEX_DEMO,F1,フレックス循環線,市内デマンド交通路線,715,,00AA00,FFFFFF,2,2
+FLEX_ROUTE_002,FLEX_DEMO,F2,エリア間接続線,エリア間を接続するフレキシブル路線,715,,0066CC,FFFFFF,2,2

@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "location_id": "AREA_001",
+        "stop_name": "中央エリア"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [139.755, 35.675],
+            [139.765, 35.675],
+            [139.765, 35.685],
+            [139.755, 35.685],
+            [139.755, 35.675]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "location_id": "AREA_002",
+        "stop_name": "西部エリア"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [139.735, 35.665],
+            [139.745, 35.665],
+            [139.745, 35.675],
+            [139.735, 35.675],
+            [139.735, 35.675]
+          ]
+        ]
+      }
+    }
+  ]
+}
