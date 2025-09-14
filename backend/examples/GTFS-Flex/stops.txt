@@ -1,0 +1,6 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+AREA_001,AREA1,中央エリア,デマンド交通対応エリア1,35.680000,139.760000,1,,4,,Asia/Tokyo,1
+AREA_002,AREA2,西部エリア,デマンド交通対応エリア2,35.670000,139.740000,1,,4,,Asia/Tokyo,1
+FIXED_STOP_001,F001,市役所前,市役所前の固定停留所,35.685000,139.765000,1,,0,,Asia/Tokyo,1
+FIXED_STOP_002,F002,病院前,総合病院前の固定停留所,35.675000,139.755000,1,,0,,Asia/Tokyo,1
+FIXED_STOP_003,F003,ショッピングモール,大型ショッピングモール前,35.665000,139.745000,1,,0,,Asia/Tokyo,1

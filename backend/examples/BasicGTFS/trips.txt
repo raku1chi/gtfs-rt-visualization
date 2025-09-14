@@ -1,0 +1,6 @@
+route_id,service_id,trip_id,trip_headsign,trip_short_name,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed
+ROUTE_001,WEEKDAY,TRIP_001_1,渋谷駅行き,,0,BLOCK_1,SHAPE_001,1,1
+ROUTE_001,WEEKDAY,TRIP_001_2,東京駅行き,,1,BLOCK_1,SHAPE_002,1,1
+ROUTE_002,WEEKDAY,TRIP_002_1,新宿・渋谷循環,,0,BLOCK_2,SHAPE_003,1,1
+ROUTE_001,WEEKEND,TRIP_001_3,渋谷駅行き,,0,BLOCK_3,SHAPE_001,1,1
+ROUTE_002,WEEKEND,TRIP_002_2,新宿・渋谷循環,,0,BLOCK_4,SHAPE_003,1,1

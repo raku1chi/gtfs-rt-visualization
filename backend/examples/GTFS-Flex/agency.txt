@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone
+FLEX_DEMO,FlexDemo Transit,https://www.flexdemo-transit.com,Asia/Tokyo,ja,03-9876-5432
